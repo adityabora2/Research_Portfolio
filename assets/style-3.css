@@ -95,10 +95,18 @@ body {
     justify-content: center;
 }
 
+/* --- MODIFICATION START --- */
 .theme-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: transparent; /* Set background to transparent on hover */
     color: #306b74 !important;
 }
+
+/* Added this rule to remove the default focus outline when the button is clicked */
+.theme-toggle:focus {
+    outline: none;
+    box-shadow: none;
+}
+/* --- MODIFICATION END --- */
 
 .theme-toggle .sun-icon {
     display: block;
