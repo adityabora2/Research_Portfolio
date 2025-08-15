@@ -1,0 +1,400 @@
+/* Dark Theme Styles */
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Header Bar */
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease, border-bottom-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icon {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.5s ease;
+}
+
+.header-icon:hover {
+    color: #4a9eff;
+}
+
+.header-link {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.5s ease;
+}
+
+/* MODIFIED: The hover color is now purple */
+.header-link:hover {
+    color: #9b59b6; 
+}
+
+/* ADDED: This new rule makes the active link purple */
+.header-link.active-link {
+    color: #9b59b6 !important;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #f0f0f0;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #4a9eff;
+}
+
+.theme-toggle .sun-icon {
+    display: block;
+}
+
+.theme-toggle .moon-icon {
+    display: none;
+}
+
+/* Light Theme Styles */
+body.light-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+body.light-theme .header-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure no black bars appear */
+body.light-theme * {
+    border-color: #e0e0e0 !important;
+}
+
+/* Remove any potential black shadows or borders */
+body.light-theme .header-bar,
+body.light-theme .profile-column,
+body.light-theme .content-column {
+    box-shadow: none !important;
+}
+
+body.light-theme .header-bar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Additional fixes for any remaining black elements */
+body.light-theme hr,
+body.light-theme .divider,
+body.light-theme .border,
+body.light-theme [class*="border"] {
+    border-color: #e0e0e0 !important;
+    background-color: #e0e0e0 !important;
+}
+
+/* Ensure all backgrounds are light in light theme */
+body.light-theme .main-container,
+body.light-theme .profile-content,
+body.light-theme .content-wrapper {
+    background-color: #ffffff !important;
+}
+
+/* Comprehensive fix for any black elements */
+body.light-theme {
+    background-color: #ffffff !important;
+}
+
+body.light-theme * {
+    background-color: inherit !important;
+}
+
+body.light-theme .header-bar,
+body.light-theme .profile-column,
+body.light-theme .content-column {
+    background-color: #ffffff !important;
+}
+
+/* Override any potential Bootstrap or framework styles */
+body.light-theme .container,
+body.light-theme .row,
+body.light-theme .col,
+body.light-theme [class*="col-"] {
+    background-color: transparent !important;
+}
+
+/* Prevent borders around profile picture and content */
+body.light-theme .profilepic,
+body.light-theme .content-wrapper,
+body.light-theme .profile-content {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Prevent any visible boxes during theme transition */
+body.light-theme .profile-column,
+body.light-theme .content-column {
+    background-color: #ffffff !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Ensure smooth background transitions */
+.profile-column,
+.content-column,
+.profile-content,
+.content-wrapper {
+    background-color: #1a1a1a;
+    transition: background-color 0.5s ease;
+}
+
+body.light-theme .profile-column,
+body.light-theme .content-column {
+    background-color: #ffffff !important;
+}
+
+body.light-theme .header-icon,
+body.light-theme .header-link {
+    color: #333333;
+}
+
+body.light-theme .header-icon:hover,
+body.light-theme .header-link:hover {
+    color: #4a9eff;
+}
+
+body.light-theme .profile-column,
+body.light-theme .content-column {
+    background-color: #ffffff;
+}
+
+body.light-theme .name,
+body.light-theme .title,
+body.light-theme .section-title,
+body.light-theme .bio-text,
+body.light-theme .contact-info p {
+    color: #333333;
+}
+
+body.light-theme .theme-toggle {
+    color: #333333;
+}
+
+body.light-theme .theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Light theme icon display */
+body.light-theme .theme-toggle .sun-icon {
+    display: none;
+}
+
+body.light-theme .theme-toggle .moon-icon {
+    display: block;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+}
+
+/* Profile Column (Left) */
+.profile-column {
+    width: 350px;
+    background-color: #1a1a1a;
+    padding: 40px 30px;
+    position: fixed;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    transition: background-color 0.5s ease;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Name */
+.name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin: 0;
+    line-height: 1.2;
+    transition: color 0.5s ease;
+}
+
+/* Title */
+.title {
+    font-size: 14px;
+    color: #f0f0f0;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.5s ease;
+}
+
+/* Profile Picture */
+.profilepic {
+    width: 240px;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+    margin: 0;
+    filter: none;
+    border: none;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #f0f0f0;
+    line-height: 1.4;
+    transition: color 0.5s ease;
+}
+
+/* Content Column (Right) */
+.content-column {
+    flex: 1;
+    margin-left: 350px;
+    padding: 40px 50px;
+    background-color: #1a1a1a;
+    transition: background-color 0.5s ease;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin: 0 0 30px 0;
+    line-height: 1.2;
+    transition: color 0.5s ease;
+}
+
+/* Bio Text */
+.bio-text {
+    font-size: 16px;
+    color: #f0f0f0;
+    margin: 0 0 20px 0;
+    line-height: 1.7;
+    transition: color 0.5s ease;
+}
+
+/* Content Links */
+.content-link {
+    color: #4a9eff;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.content-link:hover {
+    color: #6bb3ff;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .profile-column {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .content-column {
+        margin-left: 0;
+        padding: 20px;
+    }
+    
+    .header-bar {
+        padding: 10px 15px;
+    }
+    
+    .header-left, .header-right {
+        gap: 15px;
+    }
+    
+    .profilepic {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .name {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+/* Remove old styles */
+.instilogo, .allstuff, .allstuffp, .fixed-posi, .menur, .menulink, .paper, .papertitle, .thisauthor, .conf, .tag, .tagsep, .noter, .confshort {
+    display: none;
+}
